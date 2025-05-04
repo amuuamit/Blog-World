@@ -8,7 +8,7 @@ import { AuthProvider } from "./context/AuthContext";
 import ArticlesComponent from "./component/ArticleComponent";
 import ReadMore from "./component/ReadMore";
 import About from "./component/About";
-import Profile from "./component/profile";
+// import Profile from "./component/profile";
 import MyAccount from "./component/MyAccount";
 import Contact from "./component/Contact";
 import SearchResult from "./component/SearchResult";
