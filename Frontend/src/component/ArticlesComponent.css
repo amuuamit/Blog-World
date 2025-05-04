@@ -1,0 +1,151 @@
+
+body{
+    /* background: rgb(0,0,0); */
+    /* background: radial-gradient(circle, rgb(98, 84, 84) 5%, rgba(255,255,255,1) 42%);; */
+}
+button {
+    background: #65798f;
+    color: white;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+
+.article_container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .article_form {
+    flex: 1;
+    max-width: 70%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 5rem;
+  }
+  
+  .article_form_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  .articles-container {
+    flex: 2;
+    max-width: 60%;
+    margin-top: 5rem;
+  }
+  
+  .articles-container h3 {
+    text-align: center;
+    color: #444;
+  }
+  
+  .article-card {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .article-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .article-card-content {
+    flex: 1;
+  }
+  
+  .article-card h3 {
+    margin: 0;
+    color: #222;
+  }
+  
+  .article-card p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .article-card-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 900px) {
+    .article_container {
+      flex-direction: column;
+      align-items: center;
+      /* margin-top: 200px; */
+    }
+  
+    .article_form, .articles-container {
+      max-width: 100%;
+      /* padding: 20px; */
+    }
+    
+    .article-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .article-card img {
+      width: 100%;
+      height: auto;
+    }
+  }
