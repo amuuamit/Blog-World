@@ -45,5 +45,5 @@ app.get("/", (_, res) => {
 app.listen(PORT, () => {
   dbConfig();
   // cloudinaryConfig();
-  console.log(`Listening to the port ${PORT}`);
+  // console.log(`Listening to the port ${PORT}`);
 });
