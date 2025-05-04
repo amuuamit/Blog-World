@@ -19,7 +19,7 @@ const { commentRouter } = require("./Routers/comment.router");
 // const { cloudinaryConfig } = require("./Configurations/cloudinary.config");
 const _dirname = path.resolve();
 
-const cors = require("cors");
+// const cors = require("cors");
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://your-frontend.onrender.com"],
@@ -53,5 +53,5 @@ app.get("/", (_, res) => {
 app.listen(PORT, () => {
   dbConfig();
   // cloudinaryConfig();
-  // console.log(`Listening to the port ${PORT}`);
+  console.log(`Listening to the port ${PORT}`);
 });
