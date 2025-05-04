@@ -10,7 +10,7 @@ const { userRouter } = require("./Routers/user.router");
 const { articleRouter } = require("./Routers/article.router");
 dotenv.config();
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 let PORT = process.env.PORT || 3000;
@@ -18,6 +18,14 @@ let PORT = process.env.PORT || 3000;
 const { commentRouter } = require("./Routers/comment.router");
 // const { cloudinaryConfig } = require("./Configurations/cloudinary.config");
 const _dirname = path.resolve();
+
+const cors = require("cors");
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://your-frontend.onrender.com"],
+    credentials: true,
+  })
+);
 
 app.get("/set-cookie", (req, res) => {
   const token = req.cookies.token;
