@@ -19,19 +19,19 @@ const { commentRouter } = require("./Routers/comment.router");
 // const { cloudinaryConfig } = require("./Configurations/cloudinary.config");
 const _dirname = path.resolve();
 
-// const cors = require("cors");
-app.use(
-  cors({
-    origin: "https://blog-world-3son.onrender.com",
-    credentials: true,
-  })
-);
 // app.use(
 //   cors({
 //     origin: "http://localhost:5173",
 //     credentials: true,
 //   })
 // );
+
+app.use(
+  cors({
+    origin: "https://blog-world-3son.onrender.com",
+    credentials: true,
+  })
+);
 
 app.get("/set-cookie", (req, res) => {
   const token = req.cookies.token;
