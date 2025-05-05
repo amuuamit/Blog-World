@@ -22,10 +22,16 @@ const _dirname = path.resolve();
 // const cors = require("cors");
 app.use(
   cors({
-    origin: ["http://localhost:5173" || "https://blog-world-3son.onrender.com"],
+    origin: "https://blog-world-3son.onrender.com",
     credentials: true,
   })
 );
+// app.use(
+//   cors({
+//     origin: "http://localhost:5173",
+//     credentials: true,
+//   })
+// );
 
 app.get("/set-cookie", (req, res) => {
   const token = req.cookies.token;
