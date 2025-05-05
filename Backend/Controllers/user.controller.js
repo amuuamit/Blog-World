@@ -98,4 +98,19 @@ async function updateProfile(req, res) {
   }
 }
 
-module.exports = { createUser, login, getUser, updateProfile };
+async function getPosts(req, res) {
+  try {
+    const { userId } = req.query;
+    const query = userId ? { user: userId } : {};
+    const articles = await Article.find(query).populate(
+      "user",
+      "first_name last_name"
+    );
+    res.status(200).json(articles);
+  } catch (error) {
+    console.error("Error fetching articles:", error);
+    res.status(500).json({ message: "Internal server error", error: error });
+  }
+}
+
+module.exports = { createUser, login, getUser, updateProfile, getPosts };

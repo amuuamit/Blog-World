@@ -31,12 +31,15 @@ const ArticlesComponent = () => {
       console.warn("No token found in localStorage.");
     }
 
-    // Fetch existing articles
+    // Fetch articles by logged-in user
     const fetchArticles = async () => {
       try {
         const response = await axios.get(`${server}/api/v1/article/getPosts`, {
           headers: {
             Authorization: `Bearer ${token}`,
+          },
+          params: {
+            userId: user?._id, // Pass the logged-in user's ID as a query parameter
           },
         });
         setArticles(response.data);
@@ -46,7 +49,7 @@ const ArticlesComponent = () => {
     };
 
     fetchArticles();
-  }, []);
+  }, [user?._id]); // Add user ID as a dependency
 
   const handleChange = (e) => {
     const { name, value } = e.target;
