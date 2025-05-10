@@ -3,13 +3,9 @@ const {
   createUser,
   login,
   getUser,
-  getuserById,
-  getPostByUserId,
-  subscribeUser,
   updateProfile,
 } = require("../Controllers/user.controller");
 const { isLoggedIn } = require("../Middlewares/login.mw");
-const { deletePostByPostId } = require("../Controllers/article.controller");
 var userRouter = express.Router();
 
 // creating the user
