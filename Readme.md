@@ -20,11 +20,13 @@ A full-stack Blog Application where users can **read**, **create**, **update**, 
 - Tailwind CSS or other styling frameworks
 
 ### Backend:
+
 - Node.js
 - Express.js
 - MongoDB (with Mongoose)
 - CORS, dotenv, and cookie-parser
 
 ## 📁 Project Structure (example)
+
   ## -- Backend-->
   ## -- Frontend-->
